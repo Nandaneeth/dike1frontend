@@ -101,24 +101,30 @@ const ChatInterface = ({ toggleDraft }) => {
     return (
         <div className="w-full max-w-4xl mx-auto px-4 pb-4 flex flex-col justify-end h-full">
             {/* Messages Area */}
-            <div className="flex-1 overflow-y-auto py-4 mb-6">
-                <div className="space-y-6">
-                    {messages.map((message) => (
+            <div className="flex-1 overflow-y-auto py-4 mb-6 flex flex-col items-center">
+                <div className="space-y-6 w-full max-w-2xl">
+                    {messages.map((message, index) => {
+                        const showExtraSpacing = index > 0 && messages[index - 1].type !== message.type;
+                        return (
                         <div
                             key={message.id}
-                            className={`flex flex-col ${message.type === 'user' ? 'items-end' : 'items-start'} max-w-[95%] ${message.type === 'user' ? 'self-end' : ''}`}
+                            className={`flex flex-col ${message.type === 'user' ? 'items-end' : 'items-start'} ${
+                                showExtraSpacing ? 'pt-4' : ''
+                            }`}
                         >
-                            <span className="text-[10px] tracking-widest text-gray-500 font-semibold mb-1 uppercase">
-                                {message.type === 'user' ? 'Me' : 'DIKE'}
-                            </span>
+                            {message.type !== 'user' && (
+                                <span className="text-[10px] tracking-widest text-gray-500 font-semibold mb-1 uppercase">
+                                    DIKE
+                                </span>
+                            )}
                             {message.type === 'user' ? (
-                                <div className="bg-indigo-950/40 text-indigo-100 border border-indigo-700/40 px-6 py-4 rounded-2xl max-w-2xl">
+                                <div className="bg-indigo-950/40 text-indigo-100 border border-indigo-700/40 px-6 py-4 rounded-2xl">
                                     <p className="text-sm leading-relaxed">
                                         {message.content}
                                     </p>
                                 </div>
                             ) : (
-                                <div className="flex flex-col gap-3 w-full max-w-2xl">
+                                <div className="flex flex-col gap-3 w-full">
                                     <p className="text-sm leading-relaxed text-slate-100">
                                         {message.content}
                                     </p>
@@ -134,25 +140,26 @@ const ChatInterface = ({ toggleDraft }) => {
                                 </div>
                             )}
                         </div>
-                    ))}
+                        );
+                    })}
                     <div ref={messagesEndRef} />
                 </div>
             </div>
 
-            {/* Input Bar */}
-            <div className="relative w-full">
+            {/* Input Bar - Modern ChatGPT style */}
+            <div className="relative w-full max-w-2xl mx-auto">
                 <input
                     type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    className="w-full bg-[#1e1f23] border border-white/10 text-gray-300 text-sm rounded-xl py-4 pl-6 pr-12 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-gray-500 shadow-sm hover:border-white/20 transition-colors"
+                    className="w-full bg-[#1e1f23] border border-white/10 text-gray-300 text-sm rounded-full py-3 pl-6 pr-12 focus:outline-none focus:border-white/30 focus:ring-1 focus:ring-blue-500/30 placeholder-gray-500 shadow-lg hover:border-white/20 transition-all duration-200"
                     placeholder="Ask me anything about your projects"
                 />
-                <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
+                <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
                     <button
                         onClick={handleSendMessage}
-                        className="text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-white/5"
+                        className="text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-white/10"
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
