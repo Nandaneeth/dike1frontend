@@ -17,7 +17,7 @@ const Layout = () => {
     };
 
     return (
-        <div className="flex min-h-screen bg-[#131416]">
+        <div className="flex min-h-screen bg-white dark:bg-[#131416]">
             {/* Sidebar */}
             <Sidebar isExpanded={isSidebarExpanded} toggleSidebar={toggleSidebar} onSettingsClick={handleSettingsClick} />
 
