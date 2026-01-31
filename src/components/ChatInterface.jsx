@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import DocumentPreviewButton from './DocumentPreviewButton';
 
-const ChatInterface = () => {
+const ChatInterface = ({ toggleDraft }) => {
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [hasStartedChat, setHasStartedChat] = useState(false);
@@ -117,9 +118,20 @@ const ChatInterface = () => {
                                     </p>
                                 </div>
                             ) : (
-                                <p className="text-sm leading-relaxed max-w-2xl text-slate-100">
-                                    {message.content}
-                                </p>
+                                <div className="flex flex-col gap-3 w-full max-w-2xl">
+                                    <p className="text-sm leading-relaxed text-slate-100">
+                                        {message.content}
+                                    </p>
+                                    <div className="flex items-stretch gap-2 w-full">
+                                        <DocumentPreviewButton toggleDraft={toggleDraft} />
+                                        <button
+                                            className="border border-gray-500 hover:border-gray-300 rounded-lg p-3 transition-all hover:bg-white/5 group flex items-center justify-center h-full"
+                                            title="Download"
+                                        >
+                                            <span className="material-symbols-outlined text-gray-400 group-hover:text-white" style={{ fontSize: '20px' }}>download</span>
+                                        </button>
+                                    </div>
+                                </div>
                             )}
                         </div>
                     ))}
