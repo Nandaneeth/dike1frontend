@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import DocumentPreviewButton from './DocumentPreviewButton';
 
-const ChatInterface = ({ toggleDraft }) => {
+const ChatInterface = ({ toggleDraft, toggleSettings }) => {
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
     const [hasStartedChat, setHasStartedChat] = useState(false);
@@ -135,6 +135,44 @@ const ChatInterface = ({ toggleDraft }) => {
                                             title="Download"
                                         >
                                             <span className="material-symbols-outlined text-gray-400 group-hover:text-white" style={{ fontSize: '20px' }}>download</span>
+                                        </button>
+                                    </div>
+                                    {/* Action Buttons */}
+                                    <div className="flex gap-2 pt-2 items-center">
+                                        <button
+                                            onClick={() => {
+                                                navigator.clipboard.writeText(message.content);
+                                            }}
+                                            className="text-gray-400 hover:text-white transition-colors p-1.5 rounded-md hover:bg-white/10 flex items-center justify-center"
+                                            title="Copy"
+                                        >
+                                            <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>content_copy</span>
+                                        </button>
+                                        <button
+                                            className="text-gray-400 hover:text-green-400 transition-colors p-1.5 rounded-md hover:bg-white/10 flex items-center justify-center"
+                                            title="Like"
+                                        >
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                <path d="M14 9V5a3 3 0 0 0-3-3 3 3 0 0 0-3 3v4"></path>
+                                                <path d="M9 9c-2 0-4 2-4 5v6a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3v-6c0-3-2-5-4-5"></path>
+                                            </svg>
+                                        </button>
+                                        <button
+                                            className="text-gray-400 hover:text-red-400 transition-colors p-1.5 rounded-md hover:bg-white/10 flex items-center justify-center"
+                                            title="Dislike"
+                                        >
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                <path d="M10 15v4a3 3 0 0 0 3 3 3 3 0 0 0 3-3v-4"></path>
+                                                <path d="M15 15c2 0 4-2 4-5V4a3 3 0 0 0-3-3h-9a3 3 0 0 0-3 3v6c0 3 2 5 4 5"></path>
+                                            </svg>
+                                        </button>
+                                        <button
+                                            className="text-gray-400 hover:text-blue-400 transition-colors p-1.5 rounded-md hover:bg-white/10 flex items-center justify-center"
+                                            title="Regenerate"
+                                        >
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 2.2"></path>
+                                            </svg>
                                         </button>
                                     </div>
                                 </div>

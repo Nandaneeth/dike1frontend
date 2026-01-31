@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const ProfileMenu = ({ isExpanded }) => {
+const ProfileMenu = ({ isExpanded, onSettingsClick }) => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
 
@@ -30,9 +30,12 @@ const ProfileMenu = ({ isExpanded }) => {
     ];
 
     const handleMenuItemClick = (id) => {
-        console.log(`Clicked: ${id}`);
+        if (id === 'settings' && onSettingsClick) {
+            onSettingsClick();
+        } else {
+            console.log(`Clicked: ${id}`);
+        }
         setIsOpen(false);
-        // Add your navigation or action logic here
     };
 
     return (

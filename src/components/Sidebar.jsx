@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProfileMenu from './ProfileMenu';
 
-const Sidebar = ({ isExpanded, toggleSidebar }) => {
+const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
     const [chats, setChats] = useState([
         { id: 1, title: 'Project Discussion 1' },
         { id: 2, title: 'Project Discussion 2' },
@@ -126,7 +126,7 @@ const Sidebar = ({ isExpanded, toggleSidebar }) => {
 
             {/* Bottom Section - User Profile */}
             <div className="border-t border-white/5 p-4">
-                <ProfileMenu isExpanded={isExpanded} />
+                <ProfileMenu isExpanded={isExpanded} onSettingsClick={onSettingsClick} />
             </div>
         </div>
     );
