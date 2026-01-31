@@ -27,7 +27,7 @@ const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
 
     return (
         <div
-            className={`fixed top-0 left-0 h-screen bg-[#0d0e10] dark:bg-[#0d0e10] bg-legal-lightGray border-r border-legal-borders dark:border-white/5 transition-all duration-300 ease-in-out z-50 flex flex-col ${isExpanded ? 'w-64' : 'w-16'}`}
+            className={`fixed top-0 left-0 h-screen bg-legal-lightGray dark:bg-[#0d0e10] border-r border-legal-borders dark:border-white/5 transition-all duration-300 ease-in-out z-50 flex flex-col ${isExpanded ? 'w-64' : 'w-16'}`}
         >
             {/* Header Section */}
             <div className={`flex items-center h-16 px-4 ${isExpanded ? 'justify-between' : 'justify-center'}`}>
@@ -98,24 +98,24 @@ const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
             <div className="flex-1 overflow-y-auto py-2 px-2 custom-scrollbar">
                 {isExpanded && (
                     <div className="fade-in">
-                        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 px-2">
+                        <div className="text-xs font-semibold text-legal-gray dark:text-gray-500 uppercase tracking-wider mb-2 px-2">
                             Your Chats
                         </div>
                         <div className="space-y-1">
                             {filteredChats.map((chat) => (
-                                <div key={chat.id} className="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white/5 cursor-pointer transition-colors">
-                                    <div className="text-gray-400 group-hover:text-white shrink-0">
+                                <div key={chat.id} className="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-legal-navy/10 dark:hover:bg-white/5 cursor-pointer transition-colors">
+                                    <div className="text-legal-navy dark:text-gray-400 group-hover:text-legal-darkNavy dark:group-hover:text-white shrink-0">
                                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                                         </svg>
                                     </div>
-                                    <span className="text-sm text-gray-300 whitespace-nowrap overflow-hidden truncate">
+                                    <span className="text-sm text-legal-darkNavy dark:text-gray-300 group-hover:text-legal-darkNavy dark:group-hover:text-white whitespace-nowrap overflow-hidden truncate">
                                         {chat.title}
                                     </span>
                                 </div>
                             ))}
                             {filteredChats.length === 0 && (
-                                <div className="text-sm text-gray-600 px-3 italic">
+                                <div className="text-sm text-legal-gray dark:text-gray-600 px-3 italic">
                                     No chats found
                                 </div>
                             )}
@@ -125,7 +125,7 @@ const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
             </div>
 
             {/* Bottom Section - User Profile */}
-            <div className="border-t border-white/5 p-4">
+            <div className="border-t border-legal-borders dark:border-white/5 p-4 bg-legal-lightGray dark:bg-[#0d0e10]">
                 <ProfileMenu isExpanded={isExpanded} onSettingsClick={onSettingsClick} />
             </div>
         </div>

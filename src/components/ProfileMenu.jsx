@@ -49,16 +49,16 @@ const ProfileMenu = ({ isExpanded, onSettingsClick }) => {
                     JD
                 </div>
                 <div className={`flex flex-col overflow-hidden transition-all duration-300 ${isExpanded ? 'opacity-100 w-auto' : 'opacity-0 w-0'}`}>
-                    <span className="text-sm text-white font-medium truncate">John Doe</span>
+                    <span className="text-sm text-legal-darkNavy dark:text-white font-medium truncate">John Doe</span>
                 </div>
             </button>
 
             {/* Dropdown Menu */}
             {isOpen && (
-                <div className={`absolute bottom-full mb-2 bg-[#1e1f23] border border-white/10 rounded-lg shadow-xl z-50 ${isExpanded ? 'left-0 right-0 w-56' : 'left-1/2 transform -translate-x-1/2 w-56'}`}>
+                <div className={`absolute bottom-full mb-2 bg-white dark:bg-[#1e1f23] border border-legal-borders dark:border-white/10 rounded-lg shadow-xl z-50 ${isExpanded ? 'left-0 right-0 w-56' : 'left-1/2 transform -translate-x-1/2 w-56'}`}>
                     {/* Email Header */}
-                    <div className="px-4 py-3 border-b border-white/5">
-                        <p className="text-sm text-gray-400">johndoe@gmail.com</p>
+                    <div className="px-4 py-3 border-b border-legal-borders dark:border-white/5">
+                        <p className="text-sm text-legal-gray dark:text-gray-400">johndoe@gmail.com</p>
                     </div>
 
                     {/* Menu Items */}
@@ -67,10 +67,10 @@ const ProfileMenu = ({ isExpanded, onSettingsClick }) => {
                             <button
                                 key={item.id}
                                 onClick={() => handleMenuItemClick(item.id)}
-                                className={`w-full px-4 py-2.5 flex items-center gap-3 text-gray-300 transition-colors text-sm ${
+                                className={`w-full px-4 py-2.5 flex items-center gap-3 text-legal-gray dark:text-gray-300 transition-colors text-sm ${
                                     item.id === 'logout'
-                                        ? 'hover:bg-red-600 hover:text-white'
-                                        : 'hover:bg-white/10 hover:text-white'
+                                        ? 'hover:bg-red-100 dark:hover:bg-red-600 hover:text-red-700 dark:hover:text-white'
+                                        : 'hover:bg-legal-navy/10 dark:hover:bg-white/10 hover:text-legal-darkNavy dark:hover:text-white'
                                 }`}
                             >
                                 {/* Icon rendering based on item type */}
