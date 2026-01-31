@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ProfileMenu from './ProfileMenu';
 
 const Sidebar = ({ isExpanded, toggleSidebar }) => {
     const [chats, setChats] = useState([
@@ -125,15 +126,7 @@ const Sidebar = ({ isExpanded, toggleSidebar }) => {
 
             {/* Bottom Section - User Profile */}
             <div className="border-t border-white/5 p-4">
-                <div className={`flex items-center gap-3 ${isExpanded ? '' : 'justify-center'}`}>
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center text-white text-xs font-bold shrink-0">
-                        JD
-                    </div>
-                    <div className={`flex flex-col overflow-hidden transition-all duration-300 ${isExpanded ? 'opacity-100 w-auto' : 'opacity-0 w-0'}`}>
-                        <span className="text-sm text-white font-medium truncate">John Doe</span>
-                        <span className="text-xs text-gray-500 truncate">Pro Plan</span>
-                    </div>
-                </div>
+                <ProfileMenu isExpanded={isExpanded} />
             </div>
         </div>
     );
