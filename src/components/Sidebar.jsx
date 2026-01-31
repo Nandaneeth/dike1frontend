@@ -49,28 +49,28 @@ const Sidebar = ({ isExpanded, toggleSidebar }) => {
             </div>
 
             {/* New Chat & Search Section */}
-            <div className="px-3 py-2 space-y-3">
+            <div className="px-2 py-2 space-y-3">
                 {/* New Chat Button */}
-                <div className="px-3 py-2">
-                    {isExpanded ? (
+                {isExpanded ? (
+                    <button
+                        onClick={handleNewChat}
+                        className="flex items-center gap-3 w-full bg-white/10 hover:bg-white/15 text-gray-300 hover:text-white rounded-full py-1.5 px-4 transition-all duration-300"
+                        title="New Chat"
+                    >
+                        <span className="material-symbols-outlined text-xl">edit_square</span>
+                        <span className="font-medium text-sm">New chat</span>
+                    </button>
+                ) : (
+                    <div className="px-2 py-2">
                         <button
                             onClick={handleNewChat}
-                            className="flex items-center gap-3 w-full bg-white/10 hover:bg-white/15 text-gray-300 hover:text-white rounded-full py-2.5 px-5 transition-all duration-300"
+                            className="flex items-center justify-center w-full text-gray-300 hover:text-white rounded-full py-1.5 transition-all duration-300"
                             title="New Chat"
                         >
                             <span className="material-symbols-outlined text-xl">edit_square</span>
-                            <span className="font-medium text-sm">New chat</span>
                         </button>
-                    ) : (
-                        <button
-                            onClick={handleNewChat}
-                            className="flex items-center justify-center w-full text-gray-300 hover:text-white rounded-full py-2.5 transition-all duration-300"
-                            title="New Chat"
-                        >
-                            <span className="material-symbols-outlined text-xl">edit_square</span>
-                        </button>
-                    )}
-                </div>
+                    </div>
+                )}
 
 
 
