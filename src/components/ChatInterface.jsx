@@ -53,12 +53,12 @@ const ChatInterface = ({ toggleDraft, toggleSettings }) => {
                 {/* Greeting Section */}
                 <div className="flex flex-col items-center justify-center mb-16 opacity-90">
                     <div className="flex items-center gap-3 mb-8">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-gray-900 dark:text-white light:text-gray-900">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-legal-navy dark:text-white">
                             <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="currentColor" opacity="0.9" />
                         </svg>
-                        <p className="text-lg text-gray-700 dark:text-gray-300 light:text-gray-700">Hi Pranav</p>
+                        <p className="text-lg text-legal-darkNavy dark:text-gray-300">Hi Pranav</p>
                     </div>
-                    <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white light:text-gray-900 text-center tracking-tight">
+                    <h1 className="text-5xl md:text-6xl font-bold text-legal-darkNavy dark:text-white text-center tracking-tight">
                         Where should we start?
                     </h1>
                 </div>
@@ -71,11 +71,11 @@ const ChatInterface = ({ toggleDraft, toggleSettings }) => {
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
                             onKeyPress={handleKeyPress}
-                            className="w-full bg-gray-100 dark:bg-[#1e1f23] light:bg-gray-100 border border-gray-300 dark:border-white/10 light:border-gray-300 text-gray-900 dark:text-gray-300 light:text-gray-900 text-base rounded-2xl py-4 pl-6 pr-32 focus:outline-none focus:ring-1 focus:ring-blue-500/50 placeholder-gray-500 shadow-lg hover:border-gray-400 dark:hover:border-white/20 light:hover:border-gray-400 transition-colors"
+                            className="w-full bg-white dark:bg-[#1e1f23] border border-legal-borders dark:border-white/10 text-legal-darkNavy dark:text-gray-300 text-base rounded-2xl py-4 pl-6 pr-32 focus:outline-none focus:ring-1 focus:ring-legal-navy/50 placeholder-legal-gray shadow-lg hover:border-legal-navy dark:hover:border-white/20 transition-colors"
                             placeholder="Ask me anything"
                         />
                         <div className="absolute inset-y-0 right-0 pr-4 flex items-center gap-2">
-                            <button className="text-gray-600 dark:text-gray-400 light:text-gray-600 hover:text-gray-900 dark:hover:text-white light:hover:text-gray-900 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-white/5 light:hover:bg-gray-200">
+                            <button className="text-legal-gray dark:text-gray-400 hover:text-legal-darkNavy dark:hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-legal-lightGray dark:hover:bg-white/5">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <path d="M12 20h9"></path>
                                     <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
@@ -83,7 +83,7 @@ const ChatInterface = ({ toggleDraft, toggleSettings }) => {
                             </button>
                             <button
                                 onClick={handleSendMessage}
-                                className="text-gray-600 dark:text-gray-400 light:text-gray-600 hover:text-gray-900 dark:hover:text-white light:hover:text-gray-900 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-white/5 light:hover:bg-gray-200"
+                                className="text-legal-gray dark:text-gray-400 hover:text-legal-darkNavy dark:hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-legal-lightGray dark:hover:bg-white/5"
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="22" y1="2" x2="11" y2="13"></line>

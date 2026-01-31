@@ -43,9 +43,9 @@ const ProfileMenu = ({ isExpanded, onSettingsClick }) => {
             {/* Profile Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`flex items-center gap-3 w-full ${isExpanded ? '' : 'justify-center'} px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-white/10 light:hover:bg-gray-200 transition-colors`}
+                className={`flex items-center gap-3 w-full ${isExpanded ? '' : 'justify-center'} px-3 py-2 rounded-lg hover:bg-legal-lightGray dark:hover:bg-white/10 transition-colors`}
             >
-                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 flex items-center justify-center text-white text-xs font-bold shrink-0">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-legal-navy to-legal-gold flex items-center justify-center text-white text-xs font-bold shrink-0">
                     JD
                 </div>
                 <div className={`flex flex-col overflow-hidden transition-all duration-300 ${isExpanded ? 'opacity-100 w-auto' : 'opacity-0 w-0'}`}>

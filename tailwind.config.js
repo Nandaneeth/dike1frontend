@@ -13,9 +13,20 @@ export default {
       colors: {
         light: {
           bg: '#ffffff',
-          surface: '#f5f5f5',
+          surface: '#f8f9fa',
           text: '#1a1a1a',
-          border: '#e0e0e0',
+          border: '#d4d9e3',
+        },
+        legal: {
+          navy: '#1e3a8a',
+          darkNavy: '#0f172a',
+          lightNavy: '#3b5bdb',
+          gold: '#d4af37',
+          lightGold: '#f3d87f',
+          gray: '#6b7280',
+          lightGray: '#f3f4f6',
+          borders: '#cbd5e1',
+          accent: '#2563eb',
         },
         dark: {
           bg: '#131416',

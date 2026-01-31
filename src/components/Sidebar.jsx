@@ -27,19 +27,19 @@ const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
 
     return (
         <div
-            className={`fixed top-0 left-0 h-screen bg-[#0d0e10] dark:bg-[#0d0e10] light:bg-gray-50 border-r border-gray-300 dark:border-white/5 light:border-gray-200 transition-all duration-300 ease-in-out z-50 flex flex-col ${isExpanded ? 'w-64' : 'w-16'}`}
+            className={`fixed top-0 left-0 h-screen bg-[#0d0e10] dark:bg-[#0d0e10] bg-legal-lightGray border-r border-legal-borders dark:border-white/5 transition-all duration-300 ease-in-out z-50 flex flex-col ${isExpanded ? 'w-64' : 'w-16'}`}
         >
             {/* Header Section */}
             <div className={`flex items-center h-16 px-4 ${isExpanded ? 'justify-between' : 'justify-center'}`}>
                 {/* Logo - Hidden when collapsed */}
-                <div className={`font-bold text-gray-900 dark:text-white light:text-gray-900 text-xl tracking-wide overflow-hidden transition-opacity duration-300 ${isExpanded ? 'opacity-100' : 'opacity-0 w-0'}`}>
+                <div className={`font-bold text-legal-darkNavy dark:text-white text-xl tracking-wide overflow-hidden transition-opacity duration-300 ${isExpanded ? 'opacity-100' : 'opacity-0 w-0'}`}>
                     Dike.ai
                 </div>
 
                 {/* Toggle Button */}
                 <button
                     onClick={toggleSidebar}
-                    className="text-gray-600 dark:text-gray-400 light:text-gray-600 hover:text-gray-900 dark:hover:text-white light:hover:text-gray-900 transition-colors p-1 rounded-md"
+                    className="text-legal-gray dark:text-gray-400 hover:text-legal-darkNavy dark:hover:text-white transition-colors p-1 rounded-md"
                 >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -55,7 +55,7 @@ const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
                 {isExpanded ? (
                     <button
                         onClick={handleNewChat}
-                        className="flex items-center gap-3 w-full bg-gray-200 dark:bg-white/10 light:bg-gray-200 hover:bg-gray-300 dark:hover:bg-white/15 light:hover:bg-gray-300 text-gray-700 dark:text-gray-300 light:text-gray-700 hover:text-gray-900 dark:hover:text-white light:hover:text-gray-900 rounded-full py-1.5 px-4 transition-all duration-300"
+                        className="flex items-center gap-3 w-full bg-legal-navy dark:bg-white/10 hover:bg-legal-darkNavy dark:hover:bg-white/15 text-white dark:text-gray-300 rounded-full py-1.5 px-4 transition-all duration-300"
                         title="New Chat"
                     >
                         <span className="material-symbols-outlined text-xl">edit_square</span>
@@ -65,7 +65,7 @@ const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
                     <div className="px-2 py-2">
                         <button
                             onClick={handleNewChat}
-                            className="flex items-center justify-center w-full text-gray-700 dark:text-gray-300 light:text-gray-700 hover:text-gray-900 dark:hover:text-white light:hover:text-gray-900 rounded-full py-1.5 transition-all duration-300"
+                            className="flex items-center justify-center w-full text-legal-darkNavy dark:text-gray-300 hover:text-legal-navy rounded-full py-1.5 transition-all duration-300"
                             title="New Chat"
                         >
                             <span className="material-symbols-outlined text-xl">edit_square</span>
@@ -83,9 +83,9 @@ const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
                             placeholder="Search chats..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full bg-gray-100 dark:bg-[#1e1f23] light:bg-gray-100 text-gray-700 dark:text-gray-300 light:text-gray-700 text-sm rounded-lg pl-9 pr-3 py-2 border border-gray-300 dark:border-white/5 light:border-gray-300 focus:outline-none focus:border-blue-500/50"
+                            className="w-full bg-white dark:bg-[#1e1f23] text-legal-darkNavy dark:text-gray-300 text-sm rounded-lg pl-9 pr-3 py-2 border border-legal-borders dark:border-white/5 focus:outline-none focus:border-legal-navy"
                         />
-                        <svg className="absolute left-3 top-2.5 text-gray-500 dark:text-gray-500 light:text-gray-500" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className="absolute left-3 top-2.5 text-legal-gray dark:text-gray-500" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>

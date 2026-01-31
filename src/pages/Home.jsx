@@ -24,14 +24,14 @@ const Home = () => {
     // Show Settings if open
     if (isSettingsOpen) {
         return (
-            <div className="bg-[#131416] text-white font-sans h-[calc(100vh-2rem)] flex overflow-hidden p-4 gap-4 box-border">
+            <div className="bg-white dark:bg-[#131416] text-legal-darkNavy dark:text-white font-sans h-[calc(100vh-2rem)] flex overflow-hidden p-4 gap-4 box-border">
                 <Settings onClose={toggleSettings} />
             </div>
         );
     }
 
     return (
-        <div className="bg-[#131416] text-white font-sans h-[calc(100vh-2rem)] flex overflow-hidden p-4 gap-4 box-border">
+        <div className="bg-legal-lightGray dark:bg-[#131416] text-legal-darkNavy dark:text-white font-sans h-[calc(100vh-2rem)] flex overflow-hidden p-4 gap-4 box-border">
 
             {/* Left Panel - Chat Interface */}
             {/* If Draft is open, Chat takes less width, otherwise full width */}
