@@ -152,19 +152,13 @@ const ChatInterface = ({ toggleDraft, toggleSettings }) => {
                                             className="text-gray-600 dark:text-gray-400 light:text-gray-600 hover:text-green-600 dark:hover:text-green-400 light:hover:text-green-600 transition-colors p-1.5 rounded-md hover:bg-gray-200 dark:hover:bg-white/10 light:hover:bg-gray-200 flex items-center justify-center"
                                             title="Like"
                                         >
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                <path d="M14 9V5a3 3 0 0 0-3-3 3 3 0 0 0-3 3v4"></path>
-                                                <path d="M9 9c-2 0-4 2-4 5v6a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3v-6c0-3-2-5-4-5"></path>
-                                            </svg>
+                                            <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>thumb_up</span>
                                         </button>
                                         <button
                                             className="text-gray-600 dark:text-gray-400 light:text-gray-600 hover:text-red-600 dark:hover:text-red-400 light:hover:text-red-600 transition-colors p-1.5 rounded-md hover:bg-gray-200 dark:hover:bg-white/10 light:hover:bg-gray-200 flex items-center justify-center"
                                             title="Dislike"
                                         >
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                <path d="M10 15v4a3 3 0 0 0 3 3 3 3 0 0 0 3-3v-4"></path>
-                                                <path d="M15 15c2 0 4-2 4-5V4a3 3 0 0 0-3-3h-9a3 3 0 0 0-3 3v6c0 3 2 5 4 5"></path>
-                                            </svg>
+                                            <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>thumb_down</span>
                                         </button>
                                         <button
                                             className="text-gray-600 dark:text-gray-400 light:text-gray-600 hover:text-blue-600 dark:hover:text-blue-400 light:hover:text-blue-600 transition-colors p-1.5 rounded-md hover:bg-gray-200 dark:hover:bg-white/10 light:hover:bg-gray-200 flex items-center justify-center"
