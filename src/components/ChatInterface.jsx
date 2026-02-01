@@ -49,13 +49,11 @@ const ChatInterface = ({ toggleDraft, toggleSettings }) => {
     // Landing page view - when no messages and chat hasn't started
     if (!hasStartedChat && messages.length === 0) {
         return (
-            <div className="w-full max-w-4xl mx-auto px-4 pb-4 flex flex-col justify-center items-center h-full">
+            <div className="w-full max-w-4xl mx-auto px-4 pb-4 flex flex-col justify-center items-center h-full bg-legal-lightGray dark:bg-[#131416]">
                 {/* Greeting Section */}
                 <div className="flex flex-col items-center justify-center mb-16 opacity-90">
                     <div className="flex items-center gap-3 mb-8">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-legal-navy dark:text-white">
-                            <path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z" fill="currentColor" opacity="0.9" />
-                        </svg>
+                        <span className="material-symbols-outlined text-legal-navy dark:text-white" style={{ fontSize: '24px' }}>balance</span>
                         <p className="text-lg text-legal-darkNavy dark:text-gray-300">Hi Pranav</p>
                     </div>
                     <h1 className="text-5xl md:text-6xl font-bold text-legal-darkNavy dark:text-white text-center tracking-tight">
@@ -71,7 +69,7 @@ const ChatInterface = ({ toggleDraft, toggleSettings }) => {
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
                             onKeyPress={handleKeyPress}
-                            className="w-full bg-white dark:bg-[#1e1f23] border border-legal-borders dark:border-white/10 text-legal-darkNavy dark:text-gray-300 text-base rounded-2xl py-4 pl-6 pr-32 focus:outline-none focus:ring-1 focus:ring-legal-navy/50 placeholder-legal-gray shadow-lg hover:border-legal-navy dark:hover:border-white/20 transition-colors"
+                            className="w-full bg-legal-lightGray dark:bg-[#1e1f23] border border-legal-borders dark:border-white/10 text-legal-darkNavy dark:text-gray-300 text-base rounded-2xl py-4 pl-6 pr-32 focus:outline-none focus:ring-1 focus:ring-legal-navy/50 placeholder-legal-gray shadow-lg hover:border-legal-navy dark:hover:border-white/20 transition-colors"
                             placeholder="Ask me anything"
                         />
                         <div className="absolute inset-y-0 right-0 pr-4 flex items-center gap-2">
@@ -99,7 +97,7 @@ const ChatInterface = ({ toggleDraft, toggleSettings }) => {
 
     // Chat view - when messages exist
     return (
-        <div className="w-full max-w-4xl mx-auto px-4 pb-4 flex flex-col justify-end h-full">
+        <div className="w-full max-w-4xl mx-auto px-4 pb-4 flex flex-col justify-end h-full bg-legal-lightGray dark:bg-[#131416]">
             {/* Messages Area */}
             <div className="flex-1 overflow-y-auto py-4 mb-6 flex flex-col items-center">
                 <div className="space-y-6 w-full max-w-2xl">
@@ -185,7 +183,7 @@ const ChatInterface = ({ toggleDraft, toggleSettings }) => {
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    className="w-full bg-gray-100 dark:bg-[#1e1f23] light:bg-gray-100 border border-gray-300 dark:border-white/10 light:border-gray-300 text-gray-900 dark:text-gray-300 light:text-gray-900 text-sm rounded-full py-3 pl-6 pr-12 focus:outline-none focus:border-gray-400 dark:focus:border-white/30 light:focus:border-gray-400 focus:ring-1 focus:ring-blue-500/30 placeholder-gray-500 shadow-lg hover:border-gray-400 dark:hover:border-white/20 light:hover:border-gray-400 transition-all duration-200"
+                    className="w-full bg-legal-lightGray dark:bg-[#1e1f23] light:bg-legal-lightGray border border-legal-borders dark:border-white/10 light:border-legal-borders text-gray-900 dark:text-gray-300 light:text-gray-900 text-sm rounded-full py-3 pl-6 pr-12 focus:outline-none focus:border-legal-borders dark:focus:border-white/30 light:focus:border-legal-borders focus:ring-1 focus:ring-blue-500/30 placeholder-gray-500 shadow-lg hover:border-legal-borders dark:hover:border-white/20 light:hover:border-legal-borders transition-all duration-200"
                     placeholder="Ask me anything about your projects"
                 />
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center">

@@ -27,7 +27,7 @@ const Sidebar = ({ isExpanded, toggleSidebar, onSettingsClick }) => {
 
     return (
         <div
-            className={`fixed top-0 left-0 h-screen bg-legal-lightGray dark:bg-[#0d0e10] border-r border-legal-borders dark:border-white/5 transition-all duration-300 ease-in-out z-50 flex flex-col ${isExpanded ? 'w-64' : 'w-16'}`}
+            className={`fixed top-0 left-0 h-screen bg-white dark:bg-[#0d0e10] border-r border-legal-borders dark:border-white/5 transition-all duration-300 ease-in-out z-50 flex flex-col ${isExpanded ? 'w-64' : 'w-16'}`}
         >
             {/* Header Section */}
             <div className={`flex items-center h-16 px-4 ${isExpanded ? 'justify-between' : 'justify-center'}`}>
