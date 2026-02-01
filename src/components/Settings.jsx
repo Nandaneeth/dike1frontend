@@ -6,7 +6,7 @@ const Settings = ({ onClose }) => {
     const { theme, toggleTheme } = useTheme();
 
     return (
-        <div className="w-full h-full flex bg-white dark:bg-[#131416]">
+        <div className="w-full h-full flex bg-legal-lightGray dark:bg-[#131416]">
             {/* Left Sidebar */}
             <div className="w-48 border-r border-legal-borders dark:border-white/10 bg-legal-lightGray dark:bg-[#131416] p-6">
                 <h1 className="text-2xl font-bold text-legal-darkNavy dark:text-white mb-8">Settings</h1>
@@ -35,7 +35,7 @@ const Settings = ({ onClose }) => {
             </div>
 
             {/* Right Content Area */}
-            <div className="flex-1 p-8 overflow-y-auto bg-white dark:bg-[#0a0b0d]">
+            <div className="flex-1 p-8 overflow-y-auto bg-legal-lightGray dark:bg-[#0a0b0d]">
                 {/* Close Button */}
                 <div className="mb-8 flex justify-end">
                     <button
